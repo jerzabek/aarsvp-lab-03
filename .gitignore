@@ -1,0 +1,4 @@
+*.yuv
+.vscode
+*.exe
+*.zip
