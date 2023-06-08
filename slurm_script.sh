@@ -3,7 +3,7 @@
 #SBATCH --time=00:10:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=32
+#SBATCH --cpus-per-task=16
 #SBATCH --mem-per-cpu=2048MB
 #SBATCH -o omp-%j.out
 #SBATCH --partition=computes_thin
