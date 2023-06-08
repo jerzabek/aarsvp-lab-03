@@ -1,6 +1,8 @@
 #include <omp.h>
 #include <stdio.h>
 
+#define GRAIN_SIZE_NUM 100
+
 #define WIDTH 3840
 #define HEIGHT 2160
 #define TOTAL_PIXELS WIDTH *HEIGHT

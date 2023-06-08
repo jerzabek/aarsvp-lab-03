@@ -11,7 +11,7 @@ void parallelMapRGBtoYUV() {
   {
 #pragma omp single
     {
-#pragma omp taskloop grainsize(10)
+#pragma omp taskloop grainsize(GRAIN_SIZE_NUM)
       for (int i = 0; i < TOTAL_PIXELS; ++i) {
         {
           mapRGBtoYUV(i);

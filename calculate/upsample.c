@@ -5,9 +5,9 @@ void parallelUpsample() {
   {
 #pragma omp single
     {
+#pragma omp taskloop collapse(2) grainsize(GRAIN_SIZE_NUM)
       for (int i = 0; i < HEIGHT; i++) {
         for (int j = 0; j < WIDTH; j++) {
-#pragma omp task
           {
             int index = i * WIDTH + j;
 

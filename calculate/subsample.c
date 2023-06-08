@@ -34,9 +34,9 @@ void parallelCalculateSubsample() {
 #pragma omp single
     {
       for (int frame = 0; frame < NUM_FRAMES; ++frame) {
+#pragma omp taskloop collapse(2) grainsize(GRAIN_SIZE_NUM)
         for (int i = 0; i < HEIGHT; i += 2) {
           for (int j = 0; j < WIDTH; j += 2) {
-#pragma omp task
             {
               calculateSubsample(i, j, WIDTH, U, V);
             }
